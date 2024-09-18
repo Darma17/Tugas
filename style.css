@@ -1,0 +1,767 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(56, 56, 152);
+}
+
+.main-tengah-1 {
+    position: relative;
+    left: 0;
+    width: 544px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+}
+
+.main-tengah-1 .slide {
+    position: absolute;
+    width: 544px;
+    height: 400px;
+    object-fit: cover;
+    animation: slideAnimation 10s infinite;
+}
+
+@keyframes slideAnimation {
+    0% { opacity: 1; }
+    33% { opacity: 0; }
+    66% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Mengatur gambar untuk tampil bergantian */
+.main-tengah-1 .slide:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.main-tengah-1 .slide:nth-child(3) {
+    animation-delay: 6s;
+}
+.main-tengah-1 .slide:nth-child(4) {
+    animation-delay: 10s;
+}
+
+.container {
+    display: block;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.navbar {
+    background-color: rgb(25, 25, 153);
+    font-size: 12px;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 12px;
+}
+
+.navbar li{
+    list-style: none;
+    border-bottom: 5px solid transparent;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    position: relative;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar ul li:hover {
+    background-color: rgb(10, 10, 106);
+    border-color: orangered;
+}
+
+.navbar ul li ul {
+    min-width: 5rem;
+    margin-top: 15px;
+    position: absolute;
+    left: 0;
+    background: rgb(25, 25, 153);
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.navbar ul li ul li ul {
+    position: absolute;
+    top: -15px;
+    left: 120px;
+}
+
+.navbar ul li ul li:hover {
+    background-color: rgb(10, 10, 106);
+    border-color: rgb(10, 10, 106);
+}
+
+.navbar ul li ul li ul li:hover {
+    background-color: rgb(10, 10, 106);
+    border-color: rgb(10, 10, 106);
+}
+
+.navbar ul li:hover > ul,
+.navbar ul li:focus-within > ul,
+.navbar ul li ul:hover,
+.navbar ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.navbar ul li ul {
+    clear: both;
+    width: 120px;
+}
+
+.navbar ul li ul a {
+    display: block;
+    height: 10px;
+    margin-top: 0px;
+}
+
+.nav {
+    background-color: rgb(25, 25, 153);
+    font-size: 12px;
+    width: 540px;
+    margin: 0 auto;
+    display: none;
+    color: white;
+}
+
+summary {
+    display: flex;
+    justify-content: end;
+    align-items: center; 
+    list-style: none;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+}
+
+summary i {
+    margin-left: 200px;
+    cursor: pointer;
+}
+
+.logo {
+    float: left;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.logo h3 {
+    font-size: 15px;
+    align-items: center;
+    display: flex;
+
+}
+
+summary::marker {
+    content: '';
+}
+
+.nav img {
+    height: 50px;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 12px;
+    width: 40%;
+    background-color: rgb(45, 45, 159);
+}
+
+.nav li{
+    list-style: none;
+    border-bottom: 5px solid transparent;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background-color: rgb(45, 45, 159);
+}
+
+.nav li a {
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    position: relative;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav ul li:hover {
+    background-color: rgb(10, 10, 106);
+    border-color: orangered;
+}
+
+.nav ul li ul {
+    min-width: 5rem;
+    margin-top: 15px;
+    position: absolute;
+    top: -15px;
+    left: 205px;
+    background: rgb(25, 25, 153);
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.nav ul li ul li ul {
+    position: absolute;
+    top: -15px;
+    left: 120px;
+}
+
+.nav ul li ul li:hover {
+    background-color: rgb(10, 10, 106);
+    border-color: rgb(10, 10, 106);
+}
+
+.nav ul li ul li ul li:hover {
+    background-color: rgb(10, 10, 106);
+    border-color: rgb(10, 10, 106);
+}
+
+.nav ul li:hover > ul,
+.nav ul li:focus-within > ul,
+.nav ul li ul:hover,
+.nav ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.nav ul li ul {
+    clear: both;
+    width: 120px;
+}
+
+.nav ul li ul a {
+    display: block;
+    height: 10px;
+    margin-top: 0px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    width: 1100px;
+    background-color: white;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+.main-kiri {
+    width: 20%;
+    padding-top: 0;
+    margin-left: 10px;
+}
+
+.main-kiri h3 {
+    margin-bottom: 10px;
+    background-color: rgb(5, 5, 96);
+    color: white;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    display: block;
+    padding-top: 7px;
+    border-bottom: 5px solid orangered;
+}
+
+.main-kiri p {
+    margin-bottom: 10px;    
+    font-style: italic;
+    color: rgb(5, 5, 96);
+    font-size: 20px;
+}
+
+.main-kiri-3 h4 {
+    color: rgb(5, 5, 96);
+    font-size: 30px;
+}
+
+.main-kiri img {
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.main-tengah {
+    width: 50%;
+    margin-top: 0;
+    margin-right: 15px;
+}
+
+.main-tengah h3 {
+    margin-bottom: 8px;
+    width: 544px;
+    font-family: sans-serif;
+    font-size: 20px;
+    height: 35px;
+    text-align: start;
+    display: block;
+    padding-top: 7px;
+    color: rgb(5, 5, 96);
+    font-weight: bold;
+}
+
+.main-tengah small {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.main-tengah-2 img {
+    height: 150px;
+    width: 200px;
+    display: inline;
+    padding: 6px;
+    margin-bottom: 10px; 
+    border: 1px solid gray;
+}
+
+.main-tengah-3 img {
+    height: 150px;
+    width: 200px;
+    display: inline;
+    padding: 6px;
+    margin-bottom: 10px; 
+    border: 1px solid gray;
+}
+
+.main-tengah-4 img {
+    height: 150px;
+    width: 200px;
+    display: inline;
+    padding: 6px;
+    margin-bottom: 10px; 
+    border: 1px solid gray;
+}
+
+.main-tengah-5 img {
+    height: 150px;
+    width: 200px;
+    display: inline;
+    padding: 6px;
+    margin-bottom: 10px; 
+    border: 1px solid gray;
+}
+
+.main-tengah-6 img {
+    height: 150px;
+    width: 200px;
+    display: inline;
+    padding: 6px;
+    margin-bottom: 10px; 
+    border: 1px solid gray;
+}
+
+.main-tengah p {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.inline {
+    display: flex;
+}
+
+.main-kanan {
+    width: 30%;
+    margin-bottom: 50px;
+}
+
+.main-kanan-1 img {
+ cursor: pointer;
+ transition: transform 0.5 ease;
+}
+
+.main-kanan-1 img:hover {
+    transform: scale(1.2);
+}
+
+.main-kanan h3 {
+    margin-bottom: 10px;
+    background-color: rgb(5, 5, 96);
+    color: white;
+    width: 290px;
+    height: 30px;
+    padding-left: 10px;
+    text-align: start;
+    display: block;
+    padding-top: 7px;
+    border-bottom: 5px solid orangered;
+}
+
+.main-kanan-2 img {
+    display: inline;
+}
+
+.main-tengah-1 img {
+    width: 550px;
+    height: 420px;
+}
+
+.footer {
+    position: relative;
+    background-color: rgb(5, 5, 141);
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 20px 0 0;
+    flex-wrap: wrap;
+    /* height: 400px; */
+    margin-bottom: 15px;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+    background-color: rgb(5, 5, 96);
+    color: white;
+    width: 215px;
+    height: 30px;
+    padding-left: 10px;
+    text-align: start;
+    display: block;
+    padding-top: 7px;
+    border-bottom: 5px solid orangered;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-1 {
+    margin-right: 20px;
+}
+
+.footer-1 li {
+    margin-bottom: 10px;
+}
+
+.footer-2 {
+    margin-right: 20px;
+}
+
+.footer-3 {
+    margin-right: 20px;
+}
+
+.footer-3 p {
+    color: #A0BDE5;
+    margin-bottom: 10px;
+}
+
+.footer-3 h2 {
+    color: #A0BDE5;
+    margin-bottom: 10px;
+}
+
+.footer-4 {
+    margin-right: 20px;
+}
+
+.footer-4 p {
+    color: #A0BDE5;
+    margin-bottom: 10px;
+}
+
+.footer-4 p:hover {
+    color: white;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer a {
+    color: #A0BDE5;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer-3 img {
+    width: 215px;
+}
+
+.bawah {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #5555;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+}
+
+.bawah-1 footer {
+    color: white;
+    text-align: left;
+    float: left;
+    margin-right: 55px;
+}
+
+.bawah-2 small {
+    color: #A0BDE5;
+    float: right;
+    text-align: right;
+    margin-left: 55px;
+}
+
+.main-tengah-bawah {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-tengah-bawah td {
+    width: 200px;
+    height: 18px;
+}
+
+.main-tengah-atas h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-tengah-1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.main-tengah-1 h2 {
+    margin-bottom: 20px;
+    color: greenyellow;
+}
+
+.main-tengah-2 h2 {
+    color: chocolate;
+    margin-bottom: 20px;
+}
+
+.main-tengah-2 ol {
+    margin-left: 40px;
+}
+
+.main-tengah small {
+    margin-bottom: 20px;
+}
+
+.main-tengah .gmb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-tengah p {
+    margin-bottom: 20px;
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.bmg img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.ima {
+    width: 100%;
+}
+
+.main-tengah h6 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px ;
+}
+
+.p1 {
+    text-indent: 2em;
+    text-align: justify !important;
+}
+
+.main-tengah table {
+    width: 100%;
+}
+
+.table-1 {
+    margin-bottom: 20px;
+}
+
+.main-tengah table td {
+    padding: 4px 10px 4px 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.pel {
+    margin: 0 !important;
+    text-indent: 0 !important;
+}
+
+.table-2 {
+    margin-bottom: 20px;
+}
+
+.table-3 {
+    margin-bottom: 20px;
+}
+
+.table-3 table td {
+    padding: 3px 9px 4px 5px;
+    padding: 7px;
+}
+
+.klen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kon {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-tengah-bawah td h4 {
+    text-align: start;
+}
+
+.main-tengah-bawah table td {
+    margin: 0;
+    padding: 0;
+}
+
+.fto {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fto img {
+    width: 300px;
+}
+
+.guru {
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.guru-kiri img {
+    width: 150px;
+}
+
+.guru-kanan {
+    margin: 36px;
+}
+
+.guru-kanan h1 {
+    text-align: start;
+    font-weight: normal;
+    text-indent: 0;
+    margin-top: 50px;
+}
+
+.guru-kanan p {
+    text-align: start;
+    text-indent: 0;
+    margin: 0;
+}
+
+i {
+    float: right;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 560px) {
+    html {
+        width: 100%;
+    }
+    .logo {
+        display: flex;
+    }
+    .header img {
+        display: none;
+    }
+    .nav {
+        display: block;
+        width: 100%;
+    }
+    .nav ul {
+        display: block;
+    }
+    .navbar {
+        display: none;
+    }
+    .main {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 0;
+    }
+    .footer {
+        width: 100%;
+        padding: 0;
+    }
+    .bawah {
+        width: 100%;
+    }
+    .main-kiri {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    .main-tengah-1 {
+        width: 100%;
+    }
+    .main-tengah h3 {
+        font-size: 15px;
+    }
+    .main-tengah {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    .main-kanan {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+}
